@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import request from "supertest";
-import { createApp } from "../app.js";
+import { createApp } from "../create-app.js";
 import { createTrackingStore } from "../tracking/factory.js";
 import {
   bearer,

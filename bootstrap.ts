@@ -4,7 +4,7 @@ import { createTrackingStore } from "./tracking/factory.js";
 import type { TrackingStore } from "./tracking/types.js";
 import { createMetaClient } from "./ai/meta-client.js";
 import { MetaAIService } from "./ai/service.js";
-import { createApp } from "./app.js";
+import { createApp } from "./create-app.js";
 import { TEMPU_ROUTE_NUMBERS } from "./shared/routes.js";
 
 export type Bootstrapped = {
