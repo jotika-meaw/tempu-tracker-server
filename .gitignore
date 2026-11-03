@@ -1,0 +1,24 @@
+# Dependencies
+node_modules
+
+# Build output
+dist
+
+# Vercel
+.vercel
+
+# Environment and secrets (never commit real values)
+.env
+.env.*
+!.env.example
+
+# Test output
+coverage
+
+# TypeScript
+*.tsbuildinfo
+
+# Logs
+logs
+*.log
+npm-debug.log*
