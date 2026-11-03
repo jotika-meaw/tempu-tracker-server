@@ -1,5 +1,5 @@
 import OpenAI from "openai";
-import type { MetaClient } from "./service";
+import type { MetaClient } from "./service.js";
 
 type MetaClientOptions = {
   apiKey: string;

@@ -3,7 +3,7 @@ import {
   tempuRoutes,
   type Direction,
   type TempuRoute,
-} from "./routes";
+} from "./routes.js";
 
 export type JourneyErrorCode =
   | "UNKNOWN_ROUTE"

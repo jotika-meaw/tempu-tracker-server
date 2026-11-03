@@ -1,6 +1,6 @@
-import type { AppConfig } from "../config";
-import { MemoryTrackingStore } from "./memory-store";
-import { MongoTrackingStore } from "./mongo-store";
+import type { AppConfig } from "../config.js";
+import { MemoryTrackingStore } from "./memory-store.js";
+import { MongoTrackingStore } from "./mongo-store.js";
 import {
   TrackingStoreUnavailableError,
   type ActiveVehicles,
@@ -11,7 +11,7 @@ import {
   type StoreMode,
   type TrackingStore,
   type UpdateLocationResult,
-} from "./types";
+} from "./types.js";
 
 class UnavailableTrackingStore implements TrackingStore {
   readonly mode: StoreMode = "unavailable";

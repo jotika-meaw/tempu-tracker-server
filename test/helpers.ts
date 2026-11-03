@@ -1,7 +1,7 @@
-import type { AppConfig } from "../config";
-import { MetaAIService, type MetaClient } from "../ai/service";
-import { MemoryTrackingStore } from "../tracking/memory-store";
-import { TEMPU_ROUTE_NUMBERS } from "../shared/routes";
+import type { AppConfig } from "../config.js";
+import { MetaAIService, type MetaClient } from "../ai/service.js";
+import { MemoryTrackingStore } from "../tracking/memory-store.js";
+import { TEMPU_ROUTE_NUMBERS } from "../shared/routes.js";
 
 export function createTestConfig(overrides: Partial<AppConfig> = {}): AppConfig {
   return {

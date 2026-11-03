@@ -1,5 +1,5 @@
-import { tempuRoutes } from "../shared/routes";
-import type { AiLanguage } from "../validation";
+import { tempuRoutes } from "../shared/routes.js";
+import type { AiLanguage } from "../validation.js";
 
 export type LiveSummary = {
   liveDataAvailable: boolean;

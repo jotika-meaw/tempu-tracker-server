@@ -5,7 +5,7 @@ import {
   findRoute,
   getDirectionData,
   tempuRoutes,
-} from "../shared/index.ts";
+} from "../shared/index.js";
 
 const expectedNumbers = [
   "01",

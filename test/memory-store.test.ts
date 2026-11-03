@@ -1,12 +1,12 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { MemoryTrackingStore } from "../tracking/memory-store.ts";
+import { MemoryTrackingStore } from "../tracking/memory-store.js";
 import {
   toPublicVehicle,
   type CreateSessionInput,
   type SessionRecord,
-} from "../tracking/types.ts";
-import { hashSessionToken } from "../validation.ts";
+} from "../tracking/types.js";
+import { hashSessionToken } from "../validation.js";
 
 const baseTime = new Date("2026-01-01T00:00:00.000Z");
 

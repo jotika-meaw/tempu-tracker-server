@@ -8,7 +8,7 @@ import {
   type StoreMode,
   type TrackingStore,
   type UpdateLocationResult,
-} from "./types";
+} from "./types.js";
 
 type MemoryStoreOptions = {
   mode?: Extract<StoreMode, "memory" | "memory-fallback">;

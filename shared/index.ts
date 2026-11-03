@@ -6,7 +6,7 @@ export {
   type RouteDirection,
   type TempuRoute,
   type TempuRouteNumber,
-} from "./routes";
+} from "./routes.js";
 export {
   findRoute,
   getDirectionData,
@@ -15,4 +15,4 @@ export {
   type JourneyErrorCode,
   type JourneyValidation,
   type ValidatedJourney,
-} from "./journey";
+} from "./journey.js";

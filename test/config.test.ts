@@ -1,8 +1,8 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { loadConfig } from "../config.ts";
-import { buildHealth, isTrackingOperational } from "../health.ts";
-import type { StoreHealth } from "../tracking/types.ts";
+import { loadConfig } from "../config.js";
+import { buildHealth, isTrackingOperational } from "../health.js";
+import type { StoreHealth } from "../tracking/types.js";
 
 test("config has safe defaults and clamps unsafe values", () => {
   const defaults = loadConfig({});

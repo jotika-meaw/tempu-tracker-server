@@ -1,11 +1,11 @@
 import type { Express } from "express";
-import { loadConfig, type AppConfig } from "./config";
-import { createTrackingStore } from "./tracking/factory";
-import type { TrackingStore } from "./tracking/types";
-import { createMetaClient } from "./ai/meta-client";
-import { MetaAIService } from "./ai/service";
-import { createApp } from "./app";
-import { TEMPU_ROUTE_NUMBERS } from "./shared/routes";
+import { loadConfig, type AppConfig } from "./config.js";
+import { createTrackingStore } from "./tracking/factory.js";
+import type { TrackingStore } from "./tracking/types.js";
+import { createMetaClient } from "./ai/meta-client.js";
+import { MetaAIService } from "./ai/service.js";
+import { createApp } from "./app.js";
+import { TEMPU_ROUTE_NUMBERS } from "./shared/routes.js";
 
 export type Bootstrapped = {
   config: AppConfig;

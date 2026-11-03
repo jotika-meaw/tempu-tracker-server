@@ -1,8 +1,8 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import request from "supertest";
-import { createApp } from "../app.ts";
-import { createTrackingStore } from "../tracking/factory.ts";
+import { createApp } from "../app.js";
+import { createTrackingStore } from "../tracking/factory.js";
 import {
   bearer,
   createFakeMetaClient,
@@ -10,7 +10,7 @@ import {
   createTestAi,
   createTestConfig,
   validStartBody,
-} from "./helpers.ts";
+} from "./helpers.js";
 
 function setup(overrides: Parameters<typeof createTestConfig>[0] = {}) {
   const store = createMemoryStore();

@@ -1,4 +1,4 @@
-import { bootstrap } from "./bootstrap";
+import { bootstrap } from "./bootstrap.js";
 
 // Zero-configuration Express entrypoint for Vercel: the framework preset
 // detects this file (it imports the app, which imports express) and serves

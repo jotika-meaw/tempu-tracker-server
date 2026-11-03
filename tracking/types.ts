@@ -1,4 +1,4 @@
-import type { Direction } from "../shared/routes";
+import type { Direction } from "../shared/routes.js";
 
 export type StoreMode =
   | "mongodb"

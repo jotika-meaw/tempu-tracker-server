@@ -6,15 +6,15 @@ import express, {
 import cors from "cors";
 import helmet from "helmet";
 import { rateLimit } from "express-rate-limit";
-import type { AppConfig } from "./config";
-import type { TrackingStore, StoreHealth } from "./tracking/types";
+import type { AppConfig } from "./config.js";
+import type { TrackingStore, StoreHealth } from "./tracking/types.js";
 import {
   TrackingStoreUnavailableError,
   toPublicVehicle,
-} from "./tracking/types";
-import type { MetaAIService } from "./ai/service";
-import { AiError } from "./ai/errors";
-import { buildHealth, isTrackingOperational } from "./health";
+} from "./tracking/types.js";
+import type { MetaAIService } from "./ai/service.js";
+import { AiError } from "./ai/errors.js";
+import { buildHealth, isTrackingOperational } from "./health.js";
 import {
   ApiError,
   generateSessionSecrets,
@@ -24,9 +24,9 @@ import {
   parseLocationRequest,
   parseRouteNumberQuery,
   parseStartRequest,
-} from "./validation";
-import { validateJourney } from "./shared/journey";
-import type { Direction } from "./shared/routes";
+} from "./validation.js";
+import { validateJourney } from "./shared/journey.js";
+import type { Direction } from "./shared/routes.js";
 
 export type CreateAppOptions = {
   config: AppConfig;

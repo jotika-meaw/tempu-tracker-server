@@ -1,4 +1,4 @@
-import type { StoreHealth } from "./tracking/types";
+import type { StoreHealth } from "./tracking/types.js";
 
 export type AiHealth = {
   configured: boolean;

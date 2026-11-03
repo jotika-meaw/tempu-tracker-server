@@ -1,13 +1,13 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { AiError } from "../ai/errors.ts";
-import { MetaAIService } from "../ai/service.ts";
+import { AiError } from "../ai/errors.js";
+import { MetaAIService } from "../ai/service.js";
 import {
   buildInstructions,
   buildRouteContext,
   formatLiveSummary,
-} from "../ai/prompt.ts";
-import { TEMPU_ROUTE_NUMBERS } from "../shared/index.ts";
+} from "../ai/prompt.js";
+import { TEMPU_ROUTE_NUMBERS } from "../shared/index.js";
 
 const liveSummary = {
   liveDataAvailable: true,

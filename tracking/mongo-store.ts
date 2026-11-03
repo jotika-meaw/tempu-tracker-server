@@ -5,7 +5,7 @@ import {
   type Db,
   type Document,
 } from "mongodb";
-import { TEMPU_ROUTE_NUMBERS } from "../shared/routes";
+import { TEMPU_ROUTE_NUMBERS } from "../shared/routes.js";
 import {
   toPublicVehicle,
   type ActiveVehicles,
@@ -16,7 +16,7 @@ import {
   type StoreMode,
   type TrackingStore,
   type UpdateLocationResult,
-} from "./types";
+} from "./types.js";
 
 type SessionDocument = Omit<SessionRecord, "startedAt" | "lastLocationAt" | "expiresAt"> & {
   _id?: ObjectId;

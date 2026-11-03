@@ -2,9 +2,9 @@ import assert from "node:assert/strict";
 import { randomBytes } from "node:crypto";
 import test from "node:test";
 import { MongoClient } from "mongodb";
-import { MongoTrackingStore } from "../tracking/mongo-store.ts";
-import type { CreateSessionInput } from "../tracking/types.ts";
-import { hashSessionToken } from "../validation.ts";
+import { MongoTrackingStore } from "../tracking/mongo-store.js";
+import type { CreateSessionInput } from "../tracking/types.js";
+import { hashSessionToken } from "../validation.js";
 
 function mongoSession(
   index: number,

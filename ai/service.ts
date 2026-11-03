@@ -1,11 +1,11 @@
-import { AiError } from "./errors";
+import { AiError } from "./errors.js";
 import {
   buildInstructions,
   buildRouteContext,
   formatLiveSummary,
   type LiveSummary,
-} from "./prompt";
-import type { AiLanguage } from "../validation";
+} from "./prompt.js";
+import type { AiLanguage } from "../validation.js";
 
 export type MetaCreateParams = {
   model: string;

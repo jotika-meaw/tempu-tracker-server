@@ -5,7 +5,7 @@ import {
   getDirectionData,
   tempuRoutes,
   validateJourney,
-} from "../shared/index.ts";
+} from "../shared/index.js";
 
 test("every route supports a full outbound and return journey", () => {
   for (const route of tempuRoutes) {

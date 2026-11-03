@@ -10,10 +10,10 @@
  * The API key is read from the server environment and is never printed.
  */
 import OpenAI from "openai";
-import { TEMPU_ROUTE_NUMBERS } from "../shared/routes";
-import { createMetaClient } from "../ai/meta-client";
-import { MetaAIService } from "../ai/service";
-import { config } from "../config";
+import { TEMPU_ROUTE_NUMBERS } from "../shared/routes.js";
+import { createMetaClient } from "../ai/meta-client.js";
+import { MetaAIService } from "../ai/service.js";
+import { config } from "../config.js";
 
 const argumentsSet = new Set(process.argv.slice(2));
 const allowInference = argumentsSet.has("--infer");

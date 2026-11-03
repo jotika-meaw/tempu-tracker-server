@@ -2,8 +2,8 @@ import { createHash, randomBytes } from "node:crypto";
 import {
   TEMPU_ROUTE_NUMBERS,
   type Direction,
-} from "./shared/routes";
-import { validateJourney } from "./shared/journey";
+} from "./shared/routes.js";
+import { validateJourney } from "./shared/journey.js";
 
 export const DEMO_CONSENT_VERSION = "demo-v1";
 export const AI_LANGUAGES = ["bn", "en", "ctg"] as const;

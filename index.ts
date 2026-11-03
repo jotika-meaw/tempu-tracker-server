@@ -1,4 +1,4 @@
-import { bootstrap } from "./bootstrap";
+import { bootstrap } from "./bootstrap.js";
 
 async function main(): Promise<void> {
   const { config, store, ai, app, warning } = await bootstrap();
