@@ -23,9 +23,12 @@ API at `http://localhost:3001`. Needs MongoDB Atlas for persistent mode (blank `
 | `POST` | `/api/tracking/stop` | Delete the session |
 | `POST` | `/api/ai-test` | Route-grounded Meta AI answer |
 
-## Deploy (Vercel serverless)
+## Deploy (Vercel, zero-configuration Express)
 
-The Express app is exported through `api/index.ts` (lazy init, reused across warm invocations); `vercel.json` rewrites `/api/*` to it.
+`server.ts` default-exports the Express app, which the Vercel Express preset
+detects and serves as a single Function (Fluid compute). No `api/` adapter or
+`vercel.json` rewrites are needed. Local dev keeps using `index.ts`
+(`tsx watch`, `app.listen`); shared startup lives in `bootstrap.ts`.
 
 ```powershell
 vercel --prod

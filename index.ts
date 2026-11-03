@@ -1,36 +1,13 @@
-import { config } from "./config";
-import { createTrackingStore } from "./tracking/factory";
-import { createMetaClient } from "./ai/meta-client";
-import { MetaAIService } from "./ai/service";
-import { createApp } from "./app";
-import { TEMPU_ROUTE_NUMBERS } from "./shared/routes";
+import { bootstrap } from "./bootstrap";
 
 async function main(): Promise<void> {
-  const { store, warning } = await createTrackingStore(config);
+  const { config, store, ai, app, warning } = await bootstrap();
   const database = await store.health();
 
   if (warning) {
     console.warn(warning);
   }
 
-  const aiClient = config.modelApiKey
-    ? createMetaClient({
-        apiKey: config.modelApiKey,
-        baseUrl: config.metaBaseUrl,
-        timeoutMs: config.aiTimeoutMs,
-      })
-    : null;
-
-  const ai = new MetaAIService({
-    client: aiClient,
-    model: config.metaModel,
-    baseUrl: config.metaBaseUrl,
-    maxOutputTokens: config.aiMaxOutputTokens,
-    timeoutMs: config.aiTimeoutMs,
-    allowedRouteNumbers: TEMPU_ROUTE_NUMBERS,
-  });
-
-  const app = createApp({ config, store, ai });
   const server = app.listen(config.port, () => {
     console.log(`Tempu Tracker API listening on http://localhost:${config.port}`);
     console.log(
